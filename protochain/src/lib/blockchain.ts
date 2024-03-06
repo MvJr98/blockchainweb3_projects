@@ -1,11 +1,17 @@
 import Block from './block';
 
+/**
+ * Blockchain class
+ */
 
-const block1 = new Block(1, "a");
+export default class Blockchain {
+    blocks: Block[];
 
+    /**
+     * Creates a new blockchain
+     */
 
-
-
-console.log(block1.isValid());
-
-
+    constructor(){
+        this.blocks = [new Block(0, "genesis")];
+    }
+}
